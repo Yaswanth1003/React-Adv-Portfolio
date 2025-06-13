@@ -3,12 +3,16 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://Yaswanth1003.github.io/React-Adv-Portfolio",
+
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "npm run dev"
+    "start": "npm run dev",
+    "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@react-spring/web": "^10.0.1",
