@@ -1,0 +1,19 @@
+/* html, body {
+  overflow-x: hidden;
+} */
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #676668, #847b8d); /* purple gradient */
+  border-radius: 8px;
+}
