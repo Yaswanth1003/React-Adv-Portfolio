@@ -1,42 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
 const Contact = () => {
-  const Api_url = import.meta.env.VITE_API_URL;
-
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      const response = await axios.post(`${Api_url}/send`, formData);
-
-      if (response.data.success) {
-        alert("Message sent successfully!");
-        setFormData({
-          name: "",
-          email: "",
-          subject: "",
-          message: "",
-        });
-      } else {
-        alert("Failed to send message. Try again later.");
-      }
-    } catch (error) {
-      console.error("Error sending message:", error);
-      alert("Something went wrong. Please try again later.");
-    }
-  };
-
   return (
     <div
       id="contact"
@@ -48,11 +11,18 @@ const Contact = () => {
       </div>
 
       <form
-        onSubmit={handleSubmit}
+        action="https://api.web3forms.com/submit"
+        method="POST"
         className="mt-10 shadow-xl border border-white/30 rounded-3xl p-3 sm:p-10 max-w-2xl mx-auto w-full space-y-6 "
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
+            <input
+              type="hidden"
+              name="access_key"
+              value="eea7b04e-c45e-48d4-91da-43bcaca8d47a"
+            />
+
             <label className="block text-gray-300 font-medium mb-1">
               Full Name
             </label>
@@ -60,8 +30,6 @@ const Contact = () => {
               name="name"
               type="text"
               placeholder="Enter your name"
-              value={formData.name}
-              onChange={handleChange}
               required
               className="w-full p-3 rounded-xl bg-white/20 text-white  "
             ></input>
@@ -74,8 +42,6 @@ const Contact = () => {
               name="email"
               type="email"
               placeholder="example@gmail.com"
-              value={formData.email}
-              onChange={handleChange}
               required
               className="w-full p-3 rounded-xl bg-white/20 text-white "
             />
@@ -90,8 +56,6 @@ const Contact = () => {
             name="subject"
             type="text"
             placeholder="Write a subject"
-            value={formData.subject}
-            onChange={handleChange}
             required
             className="w-full p-3 rounded-xl bg-white/20 text-white "
           />
@@ -104,8 +68,6 @@ const Contact = () => {
           <textarea
             name="message"
             placeholder="Write your message..."
-            value={formData.message}
-            onChange={handleChange}
             required
             rows={5}
             className="w-full p-3 rounded-xl bg-white/20 text-white "

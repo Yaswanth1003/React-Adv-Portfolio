@@ -56,7 +56,7 @@ const Home = () => {
             {/* <a href="">
               <FaGithub className=" mb-10 mt-10 text-blue-300 text-2xl hover:text-white hover:scale-120 transition duration-300 " />
             </a> */}
-            <a href="https://drive.google.com/file/d/1nExLOqyzVN2kzWv51lCFAM9sTw-yWq3Q/view?usp=drivesdk">
+            <a href="https://drive.google.com/uc?export=download&id=1nExLOqyzVN2kzWv51lCFAM9sTw-yWq3Q">
               <button className=" flex bg-gray-700 text-amber-50 mt-10 p-3 text-xl border border-gray-500 rounded-xl hover:bg-gray-500">
                 Resume <GoDownload className="mt-1 ml-3" />
               </button>

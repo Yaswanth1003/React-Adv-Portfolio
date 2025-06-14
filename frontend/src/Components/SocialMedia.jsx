@@ -9,7 +9,7 @@ const SocialMedia = () => {
     <>
       <div className="ml-15 w-3/5 p-4 flex items-center justify-around text-white text-2xl rounded-xl border border-white/25 bg-gradient-to-r from-white/10 via-white/5 to-transparent shadow-xl backdrop-blur-sm transition-transform duration-300 hover:shadow-blue-600/40">
         <a
-          href="mailto:prasanthgadde27@gmail.com"
+          href="mailto:yaswanthbobbili2005@gmail.com"
           className="hover:text-gray-500 text-2xl duration-500 hover:scale-120 transititon-transform  ease-in-out"
         >
           <SiGmail />
