@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+require("dotenv").config();
+
 const Contact = () => {
   return (
     <div
@@ -20,7 +22,7 @@ const Contact = () => {
             <input
               type="hidden"
               name="access_key"
-              value="eea7b04e-c45e-48d4-91da-43bcaca8d47a"
+              value={process.env.API_KEY}
             />
 
             <label className="block text-gray-300 font-medium mb-1">
